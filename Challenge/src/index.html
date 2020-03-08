@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prozis Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+    <!--scripts -->
+    <script>
+        var exports = {};
+    </script>
+    <script data-main="./configpath" src="./common/require.js"></script>
+    <!--configpatch loads paths async - TODO: use configpath-->
+
+</head>
+
+<body>
+    <canvas id="maincanvas"></canvas>
+    <script>
+        requirejs(["../dist/scripts/Utils", "../dist/scripts/Ball", "../dist/scripts/index"], function(utils, ball, index) {
+            index.ChallengeModule.Challenge.getIstance().initialize();
+        });
+    </script>
+</body>
+
+</html>
